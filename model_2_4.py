@@ -6,10 +6,14 @@ not_prime = []
 for i in range(2, 16):
     for j in prime_:
         if i % j == 0:
-            not_prime.append(i)
+            is_prime = False
             break
     else:
+        is_prime = True
+    if is_prime:
         prime_.append(i)
+    else:
+        not_prime.append(i)
 
 print('Prime: ', prime_)
 print('Not prime:', not_prime)
